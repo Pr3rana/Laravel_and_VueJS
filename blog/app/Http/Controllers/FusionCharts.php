@@ -153,50 +153,8 @@ class FusionCharts extends Controller
 			));
 
 	    }
-	$jsonEncodedData = json_encode($arrData);
+		$jsonEncodedData = json_encode($arrData);
 
-
-	 //    $year = 2011;
-	 //    $arrData["linkeddata"] = array(); //"linkeddata" is responsible for feeding data and chart options to child charts.
-		// $arrDataMonth[2011]["linkeddata"] = array();
-    	// $arr=array();
-  //   	foreach($quarterly as $data)
-  //   	{
-  //   		$year = $data->Year;
-  //   		$data  = array();
-  //   		array_push($data, array(
-  //   			"label" => $data->Year,
-	 //            "value" => $data->Sales,
-  //   		))
-  //   		array_push($arrData["linkeddata"], array(
-	 //    		"id" => $year . $row['Quarter'],
-		// 		//Create the data for the monthly charts for each quarter
-		// 		"linkedchart" => array(
-		// 			"chart" => array(
-		// 				//Create dynamic caption based on the year and quarter
-		// 				"caption" => "MoM Sales - KFC for Quarter ".$row->Quarter." of $year",
-		// 				"xAxisName"=> "Month",
-		// 				"yAxisName"=> "Sales",
-		// 				"paletteColors"=> "#f5555C",
-		// 				"baseFont"=> "Open Sans",
-		// 				"theme" => "elegant"
-		// 			),
-		// 		"data" => $arrMonthData[$year][$row["Quarter"]]	
-		// 		)	
-	
-		// ));
-
-   //      	//Collect the Year for which Quarterly drilldown will be created
-   //          $year = $row->Year;
-			
-			// //Create the monthly drilldown data				
-			// $arrMonthHeader[$year][$row->Quarter] = array();
-			// $arrMonthData[$year][$row->Quarter] = array();
-			
-
-   		//}
-    	
-    	//$data = view('fusioncharts/index',['charts' => $chart_data]);
     	return view('fusioncharts/index', ['getData'=>$jsonEncodedData]);
     }
 }
